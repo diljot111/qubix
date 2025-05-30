@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.6.0",
+    "@tabler/icons-react": "^3.33.0",
+    "clsx": "^2.1.1",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.511.0",
+    "motion": "^12.15.0",
     "next": "15.1.8",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-qubix-midnight text-white shadow-lg z-50 sticky top-0">
-      <nav className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <nav className="flex justify-between items-center px-8 h-[100px]  max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
 
         <Link href="/">
@@ -53,10 +53,10 @@ export default function Navbar() {
               What We Work <ChevronDown className="w-4 h-4 ml-1" />
             </div>
             {openDropdown === "services" && (
-              <ul className="absolute top-full mt-2 bg-qubix-dark text-sm shadow-lg py-2 rounded-md">
-                <li><Link href="/services/web" className="block px-4 py-2 hover:bg-qubix-pink/20">Web Development</Link></li>
-                <li><Link href="/services/mobile" className="block px-4 py-2 hover:bg-qubix-pink/20">Mobile Apps</Link></li>
-                <li><Link href="/services/ai" className="block px-4 py-2 hover:bg-qubix-pink/20">AI Solutions</Link></li>
+              <ul className="absolute top-full mt-2 bg-qubix-dark text-sm shadow-lg py-4 rounded-md">
+                <li><Link href="/services/web" className="block px-4 py-4 hover:bg-qubix-pink/20">Web Development</Link></li>
+                <li><Link href="/services/mobile" className="block px-4 py-4 hover:bg-qubix-pink/20">Mobile Apps</Link></li>
+                <li><Link href="/services/ai" className="block px-4 py-4 hover:bg-qubix-pink/20">AI Solutions</Link></li>
               </ul>
             )}
           </li>
@@ -71,8 +71,8 @@ export default function Navbar() {
             </div>
             {openDropdown === "about" && (
               <ul className="absolute top-full mt-2 bg-qubix-dark text-sm shadow-lg py-2 rounded-md">
-                <li><Link href="/about/commitment" className="block px-4 py-2 hover:bg-qubix-pink/20">Commitment</Link></li>
-                <li><Link href="/about/beliefs" className="block px-4 py-2 hover:bg-qubix-pink/20">Beliefs</Link></li>
+                <li><Link href="/about/commitment" className="block px-4 py-4 hover:bg-qubix-pink/20">Commitment</Link></li>
+                <li><Link href="/about/beliefs" className="block px-4 py-4 hover:bg-qubix-pink/20">Beliefs</Link></li>
               </ul>
             )}
           </li>
