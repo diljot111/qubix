@@ -1,3 +1,4 @@
+import { GlowingEffect } from "./ui/glowing-effect";
 
 interface GridItemProps {
   icon: React.ReactNode;

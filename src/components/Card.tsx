@@ -29,7 +29,7 @@ export const Card = ({
 
       {/* Overlay to improve readability */}
       {backgroundImage && (
-        <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 z-10 transition-colors duration-300" />
+        <div className="absolute inset-0 bg-qubix-midnight/50 group-hover:bg-black/40 z-10 transition-colors duration-300" />
       )}
 
       <div className="relative flex flex-col gap-2 z-20">{children}</div>

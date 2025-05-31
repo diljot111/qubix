@@ -44,38 +44,8 @@ export default function Navbar() {
         <ul className="hidden lg:flex space-x-8 items-center font-medium relative">
           <li><Link href="/" className="hover:text-qubix-pink transition">Home</Link></li>
 
-          <li
-            className="relative group"
-            onMouseEnter={() => toggleDropdown("services")}
-            onMouseLeave={() => toggleDropdown(null)}
-          >
-            <div className="flex items-center cursor-pointer hover:text-qubix-pink">
-              What We Work <ChevronDown className="w-4 h-4 ml-1" />
-            </div>
-            {openDropdown === "services" && (
-              <ul className="absolute top-full mt-2 bg-qubix-dark text-sm shadow-lg py-4 rounded-md">
-                <li><Link href="/services/web" className="block px-4 py-4 hover:bg-qubix-pink/20">Web Development</Link></li>
-                <li><Link href="/services/mobile" className="block px-4 py-4 hover:bg-qubix-pink/20">Mobile Apps</Link></li>
-                <li><Link href="/services/ai" className="block px-4 py-4 hover:bg-qubix-pink/20">AI Solutions</Link></li>
-              </ul>
-            )}
-          </li>
+          <li><Link href="/services" className="hover:text-qubix-pink transition">What We Work</Link></li>
 
-          <li
-            className="relative group"
-            onMouseEnter={() => toggleDropdown("about")}
-            onMouseLeave={() => toggleDropdown(null)}
-          >
-            <div className="flex items-center cursor-pointer hover:text-qubix-pink">
-              Who We Are <ChevronDown className="w-4 h-4 ml-1" />
-            </div>
-            {openDropdown === "about" && (
-              <ul className="absolute top-full mt-2 bg-qubix-dark text-sm shadow-lg py-2 rounded-md">
-                <li><Link href="/about/commitment" className="block px-4 py-4 hover:bg-qubix-pink/20">Commitment</Link></li>
-                <li><Link href="/about/beliefs" className="block px-4 py-4 hover:bg-qubix-pink/20">Beliefs</Link></li>
-              </ul>
-            )}
-          </li>
 
           <li><Link href="/portfolio" className="hover:text-qubix-pink transition">Portfolio</Link></li>
           <li><Link href="/contact" className="hover:text-qubix-pink transition">Contact</Link></li>
