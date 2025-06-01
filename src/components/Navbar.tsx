@@ -51,7 +51,7 @@ export default function Navbar() {
           <li><Link href="/contact" className="hover:text-qubix-pink transition">Contact</Link></li>
 
           <li>
-            <a href="tel:+1234567890" className="bg-qubix-pink text-white px-4 py-2 rounded-md hover:bg-pink-600 transition">
+            <a href="tel:+91 9056132170" className="bg-qubix-pink text-white px-4 py-2 rounded-md hover:bg-pink-600 transition">
               Call Now
             </a>
           </li>

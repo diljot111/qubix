@@ -42,8 +42,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           WHAT WE WORK ?
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-         We`re a team of passionate developers, designers, and thinkers who
-          love to create innovative solutions. Our work spans across various`
+         We're a friendly bunch of tech enthusiasts – developers, designers, and creative thinkers – who are genuinely excited about building smart solutions for you. At Quibix Techs, we offer a range of IT services to help bring your ideas to life and solve your challenges.
         </p>
       </div>
 
