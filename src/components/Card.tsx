@@ -13,7 +13,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "group relative flex flex-col items-start justify-center rounded-2xl h-[250px] w-full p-6 overflow-hidden bg-white text-black dark:bg-qubix-midnight dark:text-white border border-neutral-200 dark:border-white/[0.1]",
+        "group relative flex flex-col items-start justify-center rounded-2xl h-[250px] w-full p-6 overflow-hidden bg-white text-black dark:bg-qubix-midnight dark:text-white border-2 border-gray-50 dark:border-white/[0.1]",
         className
       )}
     >

@@ -85,9 +85,9 @@ export const ContactSection = () => {
       <Spotlight />
 
       <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
-        <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+        <h1 className="text-4xl lg:text-5xl font-extrabold text-qubix-pink leading-tight mb-6">
           QUBIX TECHNOLOGY <br />
-          <span className="text-white">IT Solutions</span>
+          <span className="text-white">IT SOLUTIONS</span>
         </h1>
         <p className="text-lg mb-8 max-w-xl">
           At Qubix Techs, we specialize in delivering cutting-edge IT solutions tailored to modern business needs.

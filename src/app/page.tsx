@@ -19,147 +19,185 @@ import { IconHomeQuestion, IconQuestionMark } from "@tabler/icons-react";
 import {
   Box,
   CheckCircle,
+  CloudCog,
   Code,
+  Code2,
   ComputerIcon,
   Gem,
+  LayoutDashboard,
   Lightbulb,
   Lock,
   Power,
   Search,
+  SearchCheck,
+  Server,
   Settings,
   Sparkles,
   Users,
   Wrench,
 } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/services"); // replace with your target route
+  };
   return (
     <>
       <Navbar />
 
-      <div className="min-h-screen bg-qubix-midnight text-white px-4 sm:px-6 py-10 overflow-x-hidden">
-  <BackgroundBeamsWithCollision>
-    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 sm:gap-12">
-      {/* Text Content - Center aligned on mobile, left on desktop */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-          The largest tech show
-        </h1>
+      <div className="min-h-screen   bg-qubix-midnight text-white px-6 ">
+        <BackgroundBeamsWithCollision className="min-h-max">
+          <div className="flex flex-col lg:h-[80vh] lg:flex-row items-center lg:pl-10 justify-between gap-8 pt-16">
+            {/* Left Section */}
+            <div className="mt-[100px] sm:gap-0 lg:gap-4  flex-col text-center items-center lg:text-left lg:mt-0 flex lg:justify-center lg:w-1/2 lg:items-start">
+              {/* Heading */}
+              <TypewriterEffect className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                The largest tech show
+              </TypewriterEffect>
 
-        <p className="text-qubix-blue text-2xl sm:text-3xl md:text-4xl mt-2 lg:mt-4">
-          Where we present our brand
-        </p>
+              <br />
 
-        <p className="mt-4 text-qubix-soft-pink text-base sm:text-lg md:text-xl max-w-md lg:max-w-xl">
-          Secure, private, and compliant models training with up-to-date knowledge...
-        </p>
+              {/* Subheading */}
+              <span className="text-qubix-blue text-3xl sm:text-2xl md:text-5xl break-words">
+                Showcasing Qubix Technology to the World
+              </span>
 
-        <button className="mt-8 bg-qubix-pink text-white px-8 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg font-medium">
-          Get a Free Consultation
-        </button>
-      </div>
+              {/* Paragraph */}
+              <p className="mt-6 text-qubix-soft-pink max-w-2xl mx-auto lg:mx-0 text-sm sm:text-base break-words">
+                From sleek interfaces to seamless interactions, we blend design
+                and tech to craft digital journeys that inspire, engage, and
+                perform. UI/UX, web development, branding, all under one roof!
+              </p>
 
-      {/* Animation Section - Properly sized for all screens */}
-     <div className="w-full lg:w-1/2 flex justify-center items-center">
-  <div className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-full lg:h-auto">
-    <LottieAnimation />
-  </div>
-</div>
-    </div>
-  </BackgroundBeamsWithCollision>
+              {/* Button */}
+              <button className="mt-8 w-full max-w-[200px] text-center bg-qubix-pink text-white px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition text-sm sm:text-base">
+                Start Your Project
+              </button>
+            </div>
+
+            {/* Right Animation Section */}
+            <div className="w-full lg:w-1/2 flex justify-center items-center">
+              <div className="w-full h-auto max-w-[600px]">
+                <LottieAnimation />
+              </div>
+            </div>
+          </div>
+        </BackgroundBeamsWithCollision>
 
         {/* what we work */}
         <section className="max-w-7xl min-h-screen mx-auto px-4 py-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            What We Work On
+            WHAT WE WORK ON
           </h2>
 
           <HoverEffect>
             <Card backgroundImage="/images/web-dev.avif">
               <div className="w-8 h-8 mb-3">
-                <ComputerIcon />
+                <Code2 />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
                 Web Development
               </h3>
               <p className="text-sm text-zinc-400">
-                Full-stack websites using Next.js and Tailwind CSS.
+                Full-stack websites using wide range of technologies.
               </p>
-              <button className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition">
+              <button
+                onClick={handleClick}
+                className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition"
+              >
                 Learn More
               </button>
             </Card>
 
             <Card backgroundImage="/images/web-dev.avif">
               <div className="w-8 h-8 mb-3">
-                <ComputerIcon />
+                <LayoutDashboard />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
-                Web Development
+                UI/UX Design
               </h3>
               <p className="text-sm text-zinc-400">
-                Full-stack websites using Next.js and Tailwind CSS.
+                Clean, intuitive interfaces your users will love
               </p>
-              <button className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition">
+              <button
+                onClick={handleClick}
+                className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition"
+              >
                 Learn More
               </button>
             </Card>
 
             <Card backgroundImage="/images/web-dev.avif">
               <div className="w-8 h-8 mb-3">
-                <ComputerIcon />
+                <SearchCheck />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
-                Web Development
+                Search Engine Optimization (SEO)
               </h3>
               <p className="text-sm text-zinc-400">
-                Full-stack websites using Next.js and Tailwind CSS.
+                Get found by the right people, at the right time
               </p>
-              <button className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition">
+              <button
+                onClick={handleClick}
+                className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition"
+              >
                 Learn More
               </button>
             </Card>
 
             <Card backgroundImage="/images/web-dev.avif">
               <div className="w-8 h-8 mb-3">
-                <Code />
+                <CloudCog />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
-                Web Development
+                Cloud & DevOps
               </h3>
               <p className="text-sm text-zinc-400">
-                Full-stack websites using Next.js and Tailwind CSS.
+                Deploy, scale, and maintain with confidence
               </p>
-              <button className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition">
+              <button
+                onClick={handleClick}
+                className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition"
+              >
                 Learn More
               </button>
             </Card>
 
             <Card backgroundImage="/images/web-dev.avif">
               <div className="w-8 h-8 mb-3">
-                <ComputerIcon />
+                <Server />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
-                Web Development
+                Domain & Hosting Support
               </h3>
               <p className="text-sm text-zinc-400">
-                Full-stack websites using Next.js and Tailwind CSS.
+                We handle the tech, so you don’t have to
               </p>
-              <button className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition">
+              <button
+                onClick={handleClick}
+                className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition"
+              >
                 Learn More
               </button>
             </Card>
             <Card backgroundImage="/images/web-dev.avif">
               <div className="w-8 h-8 mb-3">
-                <ComputerIcon />
+                <Wrench />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
-                Web Development
+                Custom Software Solutions
               </h3>
               <p className="text-sm text-zinc-400">
-                Full-stack websites using Next.js and Tailwind CSS.
+                Tailor-made platforms that solve real problems
               </p>
-              <button className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition">
+              <button
+                onClick={handleClick}
+                className="bg-qubix-pink w-[120px] text-white px-1 py-1 rounded-md hover:bg-pink-600 transition"
+              >
                 Learn More
               </button>
             </Card>
@@ -173,7 +211,7 @@ export default function Home() {
 
         <div className="w-full mt-[100px] mb-[100px]">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Who We Are
+            WHO WE ARE
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-auto">
             <GridItem
@@ -221,20 +259,21 @@ export default function Home() {
             {/* Right Side (Text Content) */}
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-qubix-pink">
-                Increased Reach
+                Build Without Limits
               </h2>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mt-2 text-white">
-                On Your Website <br />
-                With Our Reliable <br />
-                SEO Services
+                Your Digital Identity,
+                <br />
+                Crafted with Code <br />& Creativity
               </h3>
               <p className="mt-4 text-white text-base sm:text-lg">
-                With an aim to help your business break through barriers and
-                achieve excellence in digital marketing, the best website
-                designing company in India empowers your business to communicate
-                efficiently to the world and surpass the limits of your
-                imagination by fueling your growth engine and elevating your
-                power.
+                In today’s digital world, your website is often the first thing
+                people see — it’s more than just a page, it’s your brand, your
+                message, and your growth tool. We don’t just build websites; we
+                create smooth, modern experiences that grab attention and
+                actually work. Whether you’re starting fresh or giving your
+                brand a new look, we’ll help bring your ideas to life with a
+                website that looks great and performs even better.
               </p>
               <button className="mt-6 bg-qubix-pink text-white px-6 py-3 rounded-full text-sm sm:text-base shadow-lg">
                 Contact Us <span className="ml-2">➤</span>

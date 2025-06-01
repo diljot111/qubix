@@ -23,3 +23,4 @@ model ContactRequest {
   message    String
   createdAt  DateTime @default(now())
 }
+
