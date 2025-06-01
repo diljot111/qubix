@@ -8,8 +8,8 @@ import { CheckCircle, Globe, Timer, Star } from "lucide-react";
 const categories = [
   "All",
   "Website Development",
-  "UI/UX Design",
-  "Marketing",
+  // "UI/UX Design",
+  // "Marketing",
   "Custom Solutions",
 ];
 
@@ -81,7 +81,7 @@ export default function PortfolioSection() {
             <span className="text-qubix-blue">PORTFOLIO</span>
           </h2>
           <p className="text-center text-qubix-soft-pink mb-10">
-            Alleviated with 7+ Years of Experience
+            With promise to deliver the best quality
           </p>
 
           {/* Tabs */}
@@ -140,7 +140,7 @@ export default function PortfolioSection() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 px-6 py-8 rounded-xl bg-qubix-soft-pink  shadow-md hover:shadow-lg transition duration-300"
+                className="flex items-start gap-4 px-6 py-8 rounded-xl bg-white  shadow-md hover:shadow-lg transition duration-300"
               >
                 <div className="">{feature.icon}</div>
                 <div>

@@ -1,3 +1,5 @@
+"use client"
+import { IconBrandLinkedin, IconBrandLinkedinFilled } from "@tabler/icons-react";
 import {
   Instagram,
   Linkedin,
@@ -6,29 +8,36 @@ import {
   Phone,
   Mail,
   ArrowRight,
+  LinkedinIcon,
+  MailIcon,
+  Router,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router=useRouter();
   return (
     <footer className="bg-black w-full text-white">
       <div className="mx-auto w-full max-w-screen-xl px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
-
         {/* Left Logo + Description + Socials */}
         <div className="space-y-4">
           <img className="h-[140px] w-[140px] bg-black" src={"./logo.png"} />
           <p className="text-sm leading-relaxed">
-            Empowering businesses with modern design and cutting–edge development.
+            Empowering businesses with modern design and cutting–edge
+            development.
           </p>
           <div className="flex gap-3">
-            <button className="p-2 border border-white/40">
-              <Instagram size={16} />
+            <button onClick={()=>{
+
+            }} className="p-2 border border-white/40">
+              <MailIcon size={16} />
             </button>
-            <button className="p-2 border border-white/40">
+            <button onClick={()=>{
+
+            }} className="p-2 border border-white/40">
               <Linkedin size={16} />
             </button>
-            <button className="p-2 border border-white/40">
-              <X size={16} />
-            </button>
+        
           </div>
         </div>
 
@@ -36,11 +45,10 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li>&rsaquo; About Us</li>
-            <li>&rsaquo; Portfolio</li>
-            <li>&rsaquo; Write For Us</li>
-            <li>&rsaquo; Blog</li>
-            <li>&rsaquo; Contact Us</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Home</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; What we do</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Portfolio</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Contact Us</li>
           </ul>
         </div>
 
@@ -48,12 +56,12 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4">Services</h3>
           <ul className="space-y-2 text-sm">
-            <li>&rsaquo; Web Design</li>
-            <li>&rsaquo; Website Development</li>
-            <li>&rsaquo; Mobile App Development</li>
-            <li>&rsaquo; CMS Solution</li>
-            <li>&rsaquo; Ecommerce Development</li>
-            <li>&rsaquo; Digital Marketing</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Web Development</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; UI/UX Design</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Search Engine Optimization</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Cloud & DevOps</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Domain & Hosting Support</li>
+            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Custom Software Solutions</li>
           </ul>
         </div>
 
@@ -64,22 +72,22 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-1" />
               <span>
-                301–302, Santiniketan Flora Business Hub,<br />
-                Abrama Road, Mota Varachha,<br />
-                Surat, Gujarat 394105
+                Ludhiana, Punjab, India <br />
               </span>
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} />
-              79842 04930
+              <a href="tel:+91 9056132170">9056132170</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={16} />
-              info@coderdevise.com
+              <a href="mailto:qubixtechnology9@gmail.com">qubixtechnology9@gmail.com</a>
             </li>
           </ul>
 
-          <button className="mt-6 px-5 py-3 flex items-center gap-2 bg-qubix-pink hover: rounded-md text-white font-semibold">
+          <button onClick={()=>{
+            router.push("/contact") 
+          }} className="mt-6 px-5 py-3 flex items-center gap-2 bg-qubix-pink hover: rounded-md text-white font-semibold">
             Get In Touch <ArrowRight size={16} />
           </button>
         </div>
@@ -88,10 +96,14 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="bg-black border-t-2 border-white text-white text-sm py-4 px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex gap-6">
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">Terms & Conditions</a>
+          <a href="#" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:underline">
+            Terms & Conditions
+          </a>
         </div>
-        <div>© 2025 CODER DEVISE. All Rights Reserved.</div>
+        <div>© 2025 QUBIX TECHNOLOGY. All Rights Reserved.</div>
       </div>
     </footer>
   );
