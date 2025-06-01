@@ -21,16 +21,16 @@ export default function ContactPage() {
           <div className="flex items-start gap-4">
             <MapPin className="text-qubix-blue" />
             <span className="text-white">
-              1234 Example St, <br /> City, State 12345
+              Ludhiana,Punjab <br /> India
             </span>
           </div>
           <div className="flex items-center gap-4">
             <Phone className="text-qubix-blue" />
-            <span className="text-white">123-456-7890</span>
+            <span className="text-white">+91 9056132170</span>
           </div>
           <div className="flex items-center gap-4">
             <Mail className="text-qubix-blue" />
-            <span className="text-white">info@example.com</span>
+            <span className="text-white">Qubixtechnology9@gmail.com</span>
           </div>
           <div className="flex items-center gap-4">
             <MessageCircle className="text-qubix-blue" />

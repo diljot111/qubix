@@ -37,32 +37,36 @@ export default function Home() {
     <>
       <Navbar />
 
-      <div className="min-h-screen  bg-qubix-midnight text-white px-6 ">
-        <BackgroundBeamsWithCollision>
-          <div className="flex flex-col lg:flex-row items-center lg:pl-10 justify-between gap-8">
-            <div className="w-full lg:w-1/2 flex justify-center items-start flex-col text-center lg:text-left">
-              <TypewriterEffect className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                The largest tech show
-              </TypewriterEffect>
-              <br />
-              <span className="text-qubix-blue text-3xl sm:text-4xl md:text-5xl">
-                where we present our brand
-              </span>
-              <p className="mt-6 text-qubix-soft-pink max-w-2xl mx-auto lg:mx-0 text-sm sm:text-base">
-                Secure, private, and compliant models training with up-to-date
-                knowledge...
-              </p>
-              <button className="mt-8 bg-qubix-pink text-white px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition text-sm sm:text-base">
-                Get a Free Consultation
-              </button>
-            </div>
+      <div className="min-h-screen bg-qubix-midnight text-white px-4 sm:px-6 py-10 overflow-x-hidden">
+  <BackgroundBeamsWithCollision>
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 sm:gap-12">
+      {/* Text Content - Center aligned on mobile, left on desktop */}
+      <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+          The largest tech show
+        </h1>
 
-            {/* Right Animation Section */}
-            <div className="w-full lg:w-1/2 flex justify-center items-center">
-              <LottieAnimation />
-            </div>
-          </div>
-        </BackgroundBeamsWithCollision>
+        <p className="text-qubix-blue text-2xl sm:text-3xl md:text-4xl mt-2 lg:mt-4">
+          Where we present our brand
+        </p>
+
+        <p className="mt-4 text-qubix-soft-pink text-base sm:text-lg md:text-xl max-w-md lg:max-w-xl">
+          Secure, private, and compliant models training with up-to-date knowledge...
+        </p>
+
+        <button className="mt-8 bg-qubix-pink text-white px-8 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg font-medium">
+          Get a Free Consultation
+        </button>
+      </div>
+
+      {/* Animation Section - Properly sized for all screens */}
+     <div className="w-full lg:w-1/2 flex justify-center items-center">
+  <div className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-full lg:h-auto">
+    <LottieAnimation />
+  </div>
+</div>
+    </div>
+  </BackgroundBeamsWithCollision>
 
         {/* what we work */}
         <section className="max-w-7xl min-h-screen mx-auto px-4 py-16">
