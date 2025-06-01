@@ -95,7 +95,7 @@ export default function Home() {
           </h2>
 
           <HoverEffect>
-            <Card backgroundImage="/images/web-dev.avif">
+            <Card backgroundImage="/images/website-dev.jpg">
               <div className="w-8 h-8 mb-3">
                 <Code2 />
               </div>
@@ -113,7 +113,7 @@ export default function Home() {
               </button>
             </Card>
 
-            <Card backgroundImage="/images/web-dev.avif">
+            <Card backgroundImage="/images/ui-ux.jpg">
               <div className="w-8 h-8 mb-3">
                 <LayoutDashboard />
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
               </button>
             </Card>
 
-            <Card backgroundImage="/images/web-dev.avif">
+            <Card backgroundImage="/images/seo.jpg">
               <div className="w-8 h-8 mb-3">
                 <SearchCheck />
               </div>
@@ -149,7 +149,7 @@ export default function Home() {
               </button>
             </Card>
 
-            <Card backgroundImage="/images/web-dev.avif">
+            <Card backgroundImage="/images/cloud.jpg">
               <div className="w-8 h-8 mb-3">
                 <CloudCog />
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
               </button>
             </Card>
 
-            <Card backgroundImage="/images/web-dev.avif">
+            <Card backgroundImage="/images/domain.jpg">
               <div className="w-8 h-8 mb-3">
                 <Server />
               </div>
@@ -184,7 +184,7 @@ export default function Home() {
                 Learn More
               </button>
             </Card>
-            <Card backgroundImage="/images/web-dev.avif">
+            <Card backgroundImage="/images/custom.jpg">
               <div className="w-8 h-8 mb-3">
                 <Wrench />
               </div>
