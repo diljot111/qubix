@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useRef, useState, useEffect } from "react";
- 
+
 export const BackgroundBeamsWithCollision = ({
   children,
   className,
@@ -12,7 +12,7 @@ export const BackgroundBeamsWithCollision = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
- 
+
   const beams = [
     {
       initialX: 10,
@@ -65,7 +65,7 @@ export const BackgroundBeamsWithCollision = ({
       className: "h-6",
     },
   ];
- 
+
   return (
     <div
       ref={parentRef}
@@ -83,7 +83,7 @@ export const BackgroundBeamsWithCollision = ({
           parentRef={parentRef}
         />
       ))}
- 
+
       {children}
       <div
         ref={containerRef}
@@ -96,12 +96,13 @@ export const BackgroundBeamsWithCollision = ({
     </div>
   );
 };
- 
+
 const CollisionMechanism = React.forwardRef<
   HTMLDivElement,
   {
-    containerRef: React.RefObject<HTMLDivElement>;
-    parentRef: React.RefObject<HTMLDivElement>;
+    containerRef: React.RefObject<HTMLDivElement | null>;
+    parentRef: React.RefObject<HTMLDivElement | null>;
+
     beamOptions?: {
       initialX?: number;
       translateX?: number;
@@ -125,7 +126,7 @@ const CollisionMechanism = React.forwardRef<
   });
   const [beamKey, setBeamKey] = useState(0);
   const [cycleCollisionDetected, setCycleCollisionDetected] = useState(false);
- 
+
   useEffect(() => {
     const checkCollision = () => {
       if (
@@ -137,12 +138,12 @@ const CollisionMechanism = React.forwardRef<
         const beamRect = beamRef.current.getBoundingClientRect();
         const containerRect = containerRef.current.getBoundingClientRect();
         const parentRect = parentRef.current.getBoundingClientRect();
- 
+
         if (beamRect.bottom >= containerRect.top) {
           const relativeX =
             beamRect.left - parentRect.left + beamRect.width / 2;
           const relativeY = beamRect.bottom - parentRect.top;
- 
+
           setCollision({
             detected: true,
             coordinates: {
@@ -154,25 +155,25 @@ const CollisionMechanism = React.forwardRef<
         }
       }
     };
- 
+
     const animationInterval = setInterval(checkCollision, 50);
- 
+
     return () => clearInterval(animationInterval);
   }, [cycleCollisionDetected, containerRef]);
- 
+
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
       setTimeout(() => {
         setCollision({ detected: false, coordinates: null });
         setCycleCollisionDetected(false);
       }, 2000);
- 
+
       setTimeout(() => {
         setBeamKey((prevKey) => prevKey + 1);
       }, 2000);
     }
   }, [collision]);
- 
+
   return (
     <>
       <motion.div
@@ -220,9 +221,9 @@ const CollisionMechanism = React.forwardRef<
     </>
   );
 });
- 
+
 CollisionMechanism.displayName = "CollisionMechanism";
- 
+
 const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
   const spans = Array.from({ length: 20 }, (_, index) => ({
     id: index,
@@ -231,7 +232,7 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
     directionX: Math.floor(Math.random() * 80 - 40),
     directionY: Math.floor(Math.random() * -50 - 10),
   }));
- 
+
   return (
     <div {...props} className={cn("absolute z-50 h-2 w-2", props.className)}>
       <motion.div
