@@ -25,16 +25,18 @@ export default function PortfolioHero() {
           </p>
           <div className="flex justify-center lg:justify-start gap-4">
             <Link href="/portfolio">
-              <button onClick={handleClick} className="bg-qubix-pink text-white px-6 py-3 rounded-[20px] lg:rounded-full font-semibold hover:bg-qubix-midnight transition">
+              <button className="bg-qubix-pink text-white px-6 py-3 rounded-[20px] lg:rounded-full font-semibold hover:bg-qubix-midnight transition">
                 View Portfolio
               </button>
             </Link>
-            <a
-              href="#book-call"
+            <Link
+              href="/contact"
+              // href="#contact"
               className="border border-qubix-pink text-qubix-pink px-6 py-3 rounded-[20px] lg:rounded-full font-semibold hover:bg-qubix-pink hover:text-white transition"
             >
               Call Us
-            </a>
+            {/* </a> */}
+            </Link>
           </div>
         </div>
 

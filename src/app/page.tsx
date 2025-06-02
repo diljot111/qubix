@@ -45,39 +45,46 @@ export default function Home() {
   const handleClick = () => {
     router.push("/services"); // replace with your target route
   };
-  return (
-    <>
-      <Navbar />
+ return (
+  <>
+    <Navbar />
 
-      <div className="min-h-screen   bg-qubix-midnight text-white px-6 ">
-        <BackgroundBeamsWithCollision className="min-h-max">
-          <div className="flex flex-col lg:h-[80vh] lg:flex-row items-center lg:pl-10 justify-between gap-8 pt-16">
-            {/* Left Section */}
-            <div className="mt-[100px] sm:gap-0 lg:gap-4  flex-col text-center items-center lg:text-left lg:mt-0 flex lg:justify-center lg:w-1/2 lg:items-start">
-              {/* Heading */}
-              <TypewriterEffect className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                The largest tech show
-              </TypewriterEffect>
+    <div className="min-h-screen bg-qubix-midnight text-white px-3 xs:px-4 sm:px-6">
+      <BackgroundBeamsWithCollision className="min-h-max">
+        {/* Main container */}
+        <div className="flex flex-col items-center justify-center pt-12 xs:pt-16 sm:pt-20 lg:flex-row lg:justify-between lg:items-center lg:h-[80vh] lg:pt-0 lg:px-8 xl:px-10">
+          
+          {/* Content Section */}
+          <div className="w-full max-w-[320px] xs:max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl lg:w-1/2 flex flex-col items-center text-center lg:text-left lg:items-start">
+            
+            {/* Heading - Adjusts from 320px up */}
+            <TypewriterEffect className="text-2xl min-[375px]:text-2xl xs:text-3xl font-bold leading-snug sm:text-4xl md:text-5xl">
+              The largest tech show
+            </TypewriterEffect>
 
-              <br />
+            {/* Subheading - Scales perfectly */}
+            <span className="text-qubix-blue text-lg min-[375px]:text-xl xs:text-2xl font-medium leading-snug sm:text-3xl md:text-4xl lg:text-5xl mt-2 xs:mt-3 sm:mt-4">
+              Showcasing Qubix Technology to the World
+            </span>
 
-              {/* Subheading */}
-              <span className="text-qubix-blue text-3xl sm:text-2xl md:text-5xl break-words">
-                Showcasing Qubix Technology to the World
-              </span>
+            {/* Paragraph - Auto-wraps at all sizes */}
+            <p className="mt-3 xs:mt-4 sm:mt-6 text-qubix-soft-pink text-xs min-[375px]:text-sm xs:text-base leading-relaxed sm:text-lg w-full">
+              From sleek interfaces to seamless interactions, we blend design
+              and tech to craft digital journeys that inspire, engage, and
+              perform. UI/UX, web development, branding, all under one roof!
+            </p>
 
-              {/* Paragraph */}
-              <p className="mt-6 text-qubix-soft-pink max-w-2xl mx-auto lg:mx-0 text-sm sm:text-base break-words">
-                From sleek interfaces to seamless interactions, we blend design
-                and tech to craft digital journeys that inspire, engage, and
-                perform. UI/UX, web development, branding, all under one roof!
-              </p>
+            {/* Button - Maintains proportions */}
+            <Link href="/contact">
+            <button className="mt-4 xs:mt-6 sm:mt-8 w-full max-w-[160px] xs:max-w-[180px] sm:max-w-[200px] bg-qubix-pink text-white px-3 py-2 xs:px-4 xs:py-2.5 sm:px-6 sm:py-3 rounded-full hover:shadow-lg hover:scale-105 transition text-xs xs:text-sm sm:text-base">
+              Start Your Project
+            </button>
+            </Link>
 
-              {/* Button */}
-              <button className="mt-8 w-full max-w-[200px] text-center bg-qubix-pink text-white px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition text-sm sm:text-base">
-                Start Your Project
-              </button>
-            </div>
+            {/* Glowing Effect - Positioned below button */}
+          </div>
+
+         
 
             {/* Right Animation Section */}
             <div className="w-full lg:w-1/2 flex justify-center items-center">
@@ -204,9 +211,12 @@ export default function Home() {
           </HoverEffect>
         </section>
         <div className="w-[100%] flex justify-center items-center mt-2 mb-[50px]">
+          <Link href="/services">
+
           <button className="bg-qubix-pink text-white rounded-md hover:bg-pink-600 transition py-4 px-8">
             View All Services
           </button>
+          </Link>
         </div>
 
         <div className="w-full mt-[100px] mb-[100px]">
@@ -275,9 +285,11 @@ export default function Home() {
                 brand a new look, we’ll help bring your ideas to life with a
                 website that looks great and performs even better.
               </p>
+              <Link href="/contact">
               <button className="mt-6 bg-qubix-pink text-white px-6 py-3 rounded-full text-sm sm:text-base shadow-lg">
                 Contact Us <span className="ml-2">➤</span>
               </button>
+              </Link>
             </div>
           </div>
         </section>

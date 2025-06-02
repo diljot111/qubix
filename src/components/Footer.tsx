@@ -11,6 +11,7 @@ import {
   LinkedinIcon,
   MailIcon,
   Router,
+  Link,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -45,8 +46,12 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Home</li>
+            <Link href="/" >
+            <li className="hover:text-qubix-pink cursor-pointer">Home</li>
+            </Link>
+            <Link href="/services" className="hover:text-qubix-pink cursor-pointer">
             <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; What we do</li>
+            </Link>
             <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Portfolio</li>
             <li className="hover:text-qubix-pink cursor-pointer">&rsaquo; Contact Us</li>
           </ul>
