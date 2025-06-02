@@ -196,7 +196,7 @@ export default function Home() {
                 <Wrench />
               </div>
               <h3 className="text-xl text-white font-semibold mb-1">
-                Custom Software Solutions
+                +
               </h3>
               <p className="text-sm text-zinc-400">
                 Tailor-made platforms that solve real problems
