@@ -69,8 +69,8 @@ export const ContactSection = () => {
         const errorData = await res.json();
         alert(errorData.error || "Error submitting the form");
       }
-    } catch (error) {
-      console.error("Submission error:", error);
+    } catch (_error) {
+      console.error("Submission error:", _error);
       alert("Network error. Please try again.");
     } finally {
       setIsSubmitting(false);
