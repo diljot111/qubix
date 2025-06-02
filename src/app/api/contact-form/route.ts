@@ -1,14 +1,16 @@
-// /pages/api/contact-form.ts
-import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
 const SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { captchaToken } = req.body;
+export async function POST(req: Request) {
+  const body = await req.json();
+  const { captchaToken } = body;
 
   if (!captchaToken) {
-    return res.status(400).json({ message: "Captcha token missing" });
+    return new Response(JSON.stringify({ message: "Captcha token missing" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${captchaToken}`;
@@ -18,12 +20,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { success, score } = response.data;
 
     if (!success) {
-      return res.status(403).json({ message: "Captcha verification failed" });
+      return new Response(JSON.stringify({ message: "Captcha verification failed" }), {
+        status: 403,
+        headers: { "Content-Type": "application/json" },
+      });
     }
 
     // Continue to process form (e.g., store in DB or send email)
-    return res.status(200).json({ message: "Form submitted successfully" });
+    return new Response(JSON.stringify({ message: "Form submitted successfully" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    return res.status(500).json({ message: "Server error during captcha verification" });
+    return new Response(JSON.stringify({ message: "Server error during captcha verification" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

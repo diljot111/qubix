@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     })
 
     return NextResponse.json({ success: true, contact })
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
       { error: 'Database operation failed' },
       { status: 500 }
