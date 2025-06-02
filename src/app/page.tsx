@@ -263,7 +263,7 @@ export default function Home() {
               {/* <div className="w-full h-96 bg-qubix-midnight rounded-xl shadow-md flex items-center justify-center">
               <span className="text-gray-600">Your Image Here</span>
             </div> */}
-              <img src="/images/web-dev.avif" alt="" />
+              <img src="/images/develop.jpg" alt="" />
             </div>
 
             {/* Right Side (Text Content) */}

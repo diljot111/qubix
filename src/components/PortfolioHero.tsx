@@ -30,7 +30,7 @@ export default function PortfolioHero() {
               </button>
             </Link>
             <Link
-              href="/contact"
+              href="tel:+91 9056132170"
               // href="#contact"
               className="border border-qubix-pink text-qubix-pink px-6 py-3 rounded-[20px] lg:rounded-full font-semibold hover:bg-qubix-pink hover:text-white transition"
             >
@@ -43,7 +43,7 @@ export default function PortfolioHero() {
         {/* Illustration */}
         <div className="flex-1">
           <img
-            src="/images/illus.webp" // Placeholder illustration
+            src="/images/port.jpg" // Placeholder illustration
             alt="Hero illustration"
             className="w-full  mx-auto"
           />
